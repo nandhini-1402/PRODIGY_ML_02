@@ -6,7 +6,7 @@ def RFM_dataframe(customer_col, purchase_date_col, revenue_col, df):
     Returns dataframe with two engineerd columns: 
     recency, and frequency, as well as an average
     revenue total for each unique
-    visitor to the Google Merch Store.
+    visitor to the Google Merch Store.  
     '''
     # Select only unique customer IDs
     cust_df = df.groupby(customer_col)
