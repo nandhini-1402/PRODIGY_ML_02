@@ -26,7 +26,7 @@ def RFM_dataframe(customer_col, purchase_date_col, revenue_col, df):
     df_frequency = df.groupby(customer_col)[purchase_date_col].count().reset_index()
     
     df_frequency.columns = [customer_col,'Frequency']
-    df_frequency['Frequency'] = df_frequency['Frequency'] - 1
+    df_frequency['Frequency'] = df_frequency['Frequency'] - 1 
     
     # Get total order revenue for each unique visitor 
     df_revenue = df.groupby(customer_col)[revenue_col].mean().reset_index()
